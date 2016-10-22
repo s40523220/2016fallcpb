@@ -194,14 +194,14 @@ import http.server, ssl
 def domake():
     # build directory
     os.chdir("./../")
-    server_address = ('localhost', 2443)
+    server_address = ('localhost', 6443)
     httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
     httpd.socket = ssl.wrap_socket(httpd.socket,
                                    server_side=True,
                                    certfile='localhost.crt',
                                    keyfile='localhost.key',
                                    ssl_version=ssl.PROTOCOL_TLSv1)
-    print("2443 https server started")
+    print("6443 https server started")
     httpd.serve_forever()
 
 # 利用執行緒執行 https 伺服器
