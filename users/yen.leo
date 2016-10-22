@@ -36,25 +36,17 @@
 <v t="amd.20160106093454.1" a="E"><vh>yen 所寫的網誌文章</vh>
 <v t="amd.20160727114506.1" a="E"><vh>201609</vh>
 <v t="amd.20160727120222.1"><vh>@edit 20160921.md</vh></v>
+<v t="yen.20161022114542.1"><vh>@edit 20161022.md</vh></v>
 </v>
 </v>
 </v>
 <v t="amd.20160106094754.1"><vh>@path ./../content/pages</vh>
-<v t="amd.20160106094829.1" a="E"><vh>yen 所寫的 pages 文章</vh>
+<v t="amd.20160106094829.1"><vh>yen 所寫的 pages 文章</vh>
 <v t="amd.20160106094844.1"><vh>@edit pages_1.md</vh></v>
 </v>
 </v>
 <v t="amd.20161004202833.1"><vh>@edit ../README.md</vh></v>
-<v t="yen.20161011110131.2" a="E"><vh>Recovered Nodes</vh>
-<v t="yen.20161011110131.3"><vh>Recovered node "head" from @clean index.html</vh>
-<v t="yen.20161011110131.4"><vh>old:head</vh></v>
-<v t="yen.20161011110131.5"><vh>new:head</vh></v>
-</v>
-<v t="yen.20161011110131.6"><vh>Recovered node "&lt;&lt; 投影片標題 &gt;&gt;" from @clean index.html</vh>
-<v t="yen.20161011110131.7"><vh>old:&lt;&lt; 投影片標題 &gt;&gt;</vh></v>
-<v t="yen.20161011110131.8"><vh>new:&lt;&lt; 投影片標題 &gt;&gt;</vh></v>
-</v>
-</v>
+<v t="yen.20161022114458.1"><vh>@button https server</vh></v>
 </vnodes>
 <tnodes>
 <t tx="amd.20151215170031.1"></t>
@@ -192,116 +184,27 @@ PLUGINS = ['liquid_tags.notebook', 'summary']
 <t tx="leo.20151213230957.1"># 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
 
 DEFAULT_DATE = 'fs'</t>
-<t tx="yen.20161011110131.2"></t>
-<t tx="yen.20161011110131.3">(uncached) amd.20161004083800.2
-Diff...
-  &lt;head&gt;
-      &lt;meta charset="utf-8"&gt;
-+     &lt;title&gt;&lt;&lt; 投影片標題 &gt;&gt;&lt;/title&gt;
--     &lt;title&gt;    2016 Fall 計算機程式課程
--     &lt;&lt; 投影片標題 &gt;&gt;
-- &lt;/title&gt;
-      &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
-      &lt;meta name="author" content="Hakim El Hattab"&gt;
-      
-      &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
-      &lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;
-      
-      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
-      
-      &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/reveal.css"&gt;
-      &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/theme/black.css" id="theme"&gt;
-      
-      &lt;!-- Theme used for syntax highlighting of code --&gt;
-      &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/lib/css/zenburn.css"&gt;
-  
-      &lt;!-- Printing and PDF exports --&gt;
-      &lt;script&gt;
-          var link = document.createElement( 'link' );
-          link.rel = 'stylesheet';
-          link.type = 'text/css';
-          link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cad-lab.github.io/cadlab_data/reveal/css/print/pdf.css' : 'https://cad-lab.github.io/cadlab_data/reveal/css/print/paper.css';
-          document.getElementsByTagName( 'head' )[0].appendChild( link );
-      &lt;/script&gt;
-  
-      &lt;!--[if lt IE 9]&gt;
-      &lt;script src="https://cad-lab.github.io/cadlab_data/reveal/lib/js/html5shiv.js"&gt;&lt;/script&gt;
-      &lt;![endif]--&gt;
-  &lt;/head&gt;
-  
-</t>
-<t tx="yen.20161011110131.4">&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;&lt;&lt; 投影片標題 &gt;&gt;&lt;/title&gt;
-    &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
-    &lt;meta name="author" content="Hakim El Hattab"&gt;
-    
-    &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
-    &lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;
-    
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
-    
-    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/reveal.css"&gt;
-    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/theme/black.css" id="theme"&gt;
-    
-    &lt;!-- Theme used for syntax highlighting of code --&gt;
-    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/lib/css/zenburn.css"&gt;
+<t tx="yen.20161022114458.1">@language python
+import os
+import subprocess
+import threading
+import http.server, ssl
 
-    &lt;!-- Printing and PDF exports --&gt;
-    &lt;script&gt;
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cad-lab.github.io/cadlab_data/reveal/css/print/pdf.css' : 'https://cad-lab.github.io/cadlab_data/reveal/css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    &lt;/script&gt;
+def domake():
+    # build directory
+    os.chdir("./../")
+    server_address = ('localhost', 1443)
+    httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd.socket = ssl.wrap_socket(httpd.socket,
+                                   server_side=True,
+                                   certfile='localhost.crt',
+                                   keyfile='localhost.key',
+                                   ssl_version=ssl.PROTOCOL_TLSv1)
+    g.es("1443 啟動 https:")
+    httpd.serve_forever()
 
-    &lt;!--[if lt IE 9]&gt;
-    &lt;script src="https://cad-lab.github.io/cadlab_data/reveal/lib/js/html5shiv.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-&lt;/head&gt;
-
-</t>
-<t tx="yen.20161011110131.5">&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;    2016 Fall 計算機程式課程
-    &lt;&lt; 投影片標題 &gt;&gt;
-&lt;/title&gt;
-    &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
-    &lt;meta name="author" content="Hakim El Hattab"&gt;
-    
-    &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
-    &lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;
-    
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
-    
-    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/reveal.css"&gt;
-    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/css/theme/black.css" id="theme"&gt;
-    
-    &lt;!-- Theme used for syntax highlighting of code --&gt;
-    &lt;link rel="stylesheet" href="https://cad-lab.github.io/cadlab_data/reveal/lib/css/zenburn.css"&gt;
-
-    &lt;!-- Printing and PDF exports --&gt;
-    &lt;script&gt;
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cad-lab.github.io/cadlab_data/reveal/css/print/pdf.css' : 'https://cad-lab.github.io/cadlab_data/reveal/css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    &lt;/script&gt;
-
-    &lt;!--[if lt IE 9]&gt;
-    &lt;script src="https://cad-lab.github.io/cadlab_data/reveal/lib/js/html5shiv.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-&lt;/head&gt;
-
-</t>
-<t tx="yen.20161011110131.6">(uncached) amd.20161004083800.3
-Diff...
-+ 2016 Fall 計算機程式課程
-</t>
-<t tx="yen.20161011110131.7">2016 Fall 計算機程式課程
-</t>
-<t tx="yen.20161011110131.8"></t>
+# 利用執行緒執行 https 伺服器
+make = threading.Thread(target=domake)
+make.start()</t>
 </tnodes>
 </leo_file>
